@@ -1,10 +1,12 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App'
+import React from 'react';
 
+const Main = () => {
+    return (
+        <main>
+            <h1>Bienvenue sur votre application React !</h1>
+            {/* Ajoutez le contenu principal de votre application ici */}
+        </main>
+    );
+}
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+export default Main;
