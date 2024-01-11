@@ -77,16 +77,17 @@ function editNav() {
     }
   }
 
-  function validPassword() {
-    let mailCaractere = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; //regex email
-    if (!mailCaractere.test(password.value)) {
-      setErreur(password, "Veuillez saisir un mot de passe valide.", "passwordError");
-      return false;
-    } else {
-      setValid(password, "passwordError");
-      return true;
-    }
-  }
+  function validPassword() {    
+        let pwdCaractere =
+          /^[a-zA-Z\-éëàèìòùÀÈÌÒÙáéíóúýÁÉÍÓÚÝâêîôûÂÊÎÔÛãñõÃÑÕäëïöüÿÄËÏÖÜŸçÇÆæœ]{2,}$/;
+        if (!pwdCaractere.test(password.value)) {
+          setErreur(password, "Veuillez saisir un mot de passe correct.", "passwordError");
+          return false;
+        } else {
+          setValid(password, "passwordError");
+          return true;
+        }
+      }
  
   
  
