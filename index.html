@@ -12,8 +12,8 @@
 		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 	<meta name="description" content="Calculez vos scores de tennis en un instant" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="stylesheet" href="css/style.css" />
 	<link rel="stylesheet" href="css/modal.css" />
+	<link rel="stylesheet" href="css/style.css" />
 	<link rel="icon" type="image/svg+xml" href="src/assets/60158.jpg" />
 	<link rel="stylesheet" crossorigin="anonymous" href="https://pro.fontawesome.com/releases/v5.12.1/css/all.css"
 		integrity="sha384-TxKWSXbsweFt0o2WqfkfJRRNVaPdzXJ/YLqgStggBVRREXkwU7OKz+xXtqOU4u8+" />
@@ -23,58 +23,39 @@
 
 <body class="body">
 	<!-- Image and text -->
-	<nav id="myTopnav" class="navbar navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand" href="#">
+	<nav id="myTopnav" class="topnav navbar navbar-expand-lg navbar-light bg-light">
+		<div class="navbar-brand">
 			<img src="src/assets/60158.jpg" width="60" height="60" class="d-inline-block" alt="">
 			<strong>Tennis Counter</strong>
-		</a>
+		</div>
 
 		<div class="collapse main-navbar navbar-collapse justify-content-end" id="navbarNavDropdown">
-			<ul class="navbar-nav ">
-				<li class="nav-item active">
-					<a class="nav-link active" href="#">Accueil <span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Joueurs</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Arbitres</a>
-				</li>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
-						aria-haspopup="true" aria-expanded="false">
-						Matchs
-					</a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-						<a class="dropdown-item" href="#">Matchs en Cours</a>
-						<a class="dropdown-item" href="#">Resultats des matchs</a>
-					</div>
-				</li>	
+			<div class="navbar-nav ">
+				<a href="#" class="active"><span>Accueil</span></a>
+				<a href="#"><span>Joueurs</span></a>
+				<a href="#"><span>Arbitres</span></a>
+				<a href="#"><span>Matchs passés</span></a>
 				<a href="javascript:void(0);" class="icon" onclick="editNav()">
-					<i class="fa fa-bars style"></i>			
-			</ul>
-
-		
-
-			<form class="form-inline my-2 my-lg-0">
-				<button class="btn btn-outline-success my-2 my-sm-0 btn-signup modal-btn"
-					type="submit">Connection</button>
-			</form>
+					<i class="fa fa-bars style"></i>
+				</a>
+			</div>
 		</div>
+
+		<form class="form-inline my-2 my-lg-0">
+			<button class="btn btn-outline-success my-2 my-sm-0 btn-signup modal-btn" type="submit">Connection</button>
+		</form>
 	</nav>
+
 	<main>
-
-
 		<!--accueil-->
 		<div class="hero-section">
 			<div class="hero-content">
 				<h1 class="hero-headline">
 					Tennis Counter </h1>
 				<p class="hero-text">
-
 					Pour vous professionnel, vos accès est illimité.
 					Vous avez choisis de gérer vos propres matchs et calcul de point.
-					Cette application est faites pour vous.</br>
+					Cette application est faites pour vous.<br>
 
 					Pour vous visiteurs vous avez accès à résultats des matchs passés
 					et ceux en direct. Vous avez aussi la possibilité de consulter
@@ -130,33 +111,26 @@
 				<input class="button btn-end" id="end" type="submit" value="Fermer" /><br>
 			</div>
 		</div>
-
-
-
-
 	</main>
 
-	<footer class="bg-light">
+	<footer class="footer bg-light">
 		<p class="copyrights">
 			Copyright 2023 - 2024, TennisCounter Inc.
 		</p>
 	</footer>
+
 	<script src="modal.js"></script>
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
 		crossorigin="anonymous"></script>
-
-
-
-
-
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
 		integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
 		crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
 		integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
 		crossorigin="anonymous"></script>
+
 </body>
 
 </html>
