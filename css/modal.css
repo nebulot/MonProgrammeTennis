@@ -195,9 +195,8 @@ input {
 }
 
 /* ***************** */
-.btn {
-  min-width: 7rem;
-  width: 10%;
+.btn, .btn2, .btn_close_modal {
+  
   border-radius: 10px;
   outline: none;
   border: none;
@@ -205,14 +204,38 @@ input {
   padding: 15px 0;
   font-size: clamp(1.8rem, 2.2vw, 2rem);
   color: var(--light);
-  background: var(--red-highlight);
+  background: var(--green-highlight);
   font-family: "DMSans-Medium", sans-serif;
 }
 
+.btn{
+    min-width: 7rem;
+    width: 10%;
+
+}
+
+.btn2{
+    min-width: 15rem;
+    width: 20%;
+}
+
+.btn_close_modal{
+    min-width: 15rem;
+    width: 20%;
+}
+
+.fa-bars {
+    color :var(--green-highlight); 
+}
+
+
+
 .btn:hover,
 .btn:focus {
-  background: #3876ac;
+  background: var(--blue-highlight);
+  color : white;
 }
+
 
 .btn_signup{
   text-transform: capitalize;
@@ -222,6 +245,11 @@ input {
   display: block;
   margin: 0 auto;
 }
+
+.btn_submit2 {
+    display: block;
+    margin: 0 auto;
+  }
 
 /* Style the arrow inside the select element: */
 .select-selected:after {
