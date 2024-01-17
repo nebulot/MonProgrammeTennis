@@ -1,0 +1,72 @@
+{
+    "players": [
+        {
+            "id": 1,
+            "lastName": "Nebulot",
+            "firstName" : "Elodie",
+            "level": "senior",
+            "birthdate" : "23.09.1986",
+            "height" : "165",
+            "weight" : "65",
+            "picture" : "src/assets/players/elodieNebulot.webp",
+            "gender" : "female"         
+           
+           
+        },
+        {
+            "id": 2,
+            "lastName": "Nebulot",
+            "firstName" : "Elodie",
+            "level": "senior",
+            "birthdate" : "23.09.1986",
+            "height" : "165",
+            "weight" : "65",
+            "picture" : "src/assets/players/elodieNebulot.webp",
+            "gender" : "male"     
+           
+           
+        },
+        {
+            "id": 1,
+            "lastName": "Nebulot",
+            "firstName" : "Elodie",
+            "level": "senior",
+            "birthdate" : "23.09.1986",
+            "height" : "165",
+            "weight" : "65",
+            "picture" : "src/assets/players/elodieNebulot.webp",
+            "gender" : ""         
+           
+           
+        },
+        {
+            "id": 1,
+            "lastName": "Nebulot",
+            "firstName" : "Elodie",
+            "level": "senior",
+            "birthdate" : "23.09.1986",
+            "height" : "165",
+            "weight" : "65",
+            "picture" : "src/assets/players/elodieNebulot.webp",
+            "gender" : ""         
+           
+           
+        },
+        {
+            "id": 1,
+            "lastName": "Nebulot",
+            "firstName" : "Elodie",
+            "level": "senior",
+            "birthdate" : "23.09.1986",
+            "height" : "165",
+            "weight" : "65",
+            "picture" : "src/assets/players/elodieNebulot.webp",
+            "gender" : ""         
+           
+           
+        }          
+       
+    ]
+}
+        
+    

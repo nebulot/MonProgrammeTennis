@@ -58,7 +58,7 @@ label {
     display: inline-block;
 }
 
-input {
+input.input_modal {
     padding: 8px;
     border-radius: 8px;
     font-size: clamp(1.2rem, 1.4vw, 1.4rem);

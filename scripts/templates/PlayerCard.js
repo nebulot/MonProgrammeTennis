@@ -1,3 +1,21 @@
+// 4 create DOM player CARD
+
+
+    /*
+     * @constructor
+     * @param {Object} recipe
+     * @param {number} recipe.id
+     * @param {string} recipe.name
+     * @param {number} recipe.servings
+     * @param {number} recipe.time
+     * @param {string} recipe.description
+     * @param {string} recipe.appliance
+     * @param {Array.<string>} recipe.ustensils
+     * @param {Array.<Object>} recipe.ingredients
+     */
+
+
+
 class PlayerCard {
     constructor(data) {
         this.id = data.id;
@@ -16,49 +34,72 @@ class PlayerCard {
      * @returns HTMLElement - Player Card
      */
 
-    get playerCard() {
-        const card = createDom(
-            "article",
-            { class: "recipe__card" },
-            createDom("div", { class: "recipe__card__placeholder" }),
-            createDom(
-                "section",
-                { class: "recipe__card__section" },
-                createDom(
-                    "header",
-                    { class: "recipe__card__header" },
-                    createDom("h2", `${this.lastName}`, { class: "recipe__card__header__title" }),
-                    createDom(
-                        "h2",
-                        `${this.id}min `, { class: "recipe__card__header__time" },
-                        createDom("i", { class: "fal fa-clock recipe__card__header__icon" })
-                    )
-                ),
-                createDom(
-                    "aside",
-                    { class: "recipe__card__aside" },
-                    createDom(
-                        "ul",
-                        { class: "recipe__card__list" },
-                        // ... pour transformer les éléments du tableau en paramètres pour createDom
-                        //     .map() pour renvoyer un tableau car .forEach() renvoie undefined
-                        ...this.lastName.map((lastName) => {
-                            // return pour renvoyer une valeur sinon .map() renvoie un tableau de undefined
-                            return createDom(
-                                "li",
-                                createDom("strong", `${lastName.lastName} `),
-                                //ingredient.quantity ? `: ${ingredient.quantity} ` : "",
-                                //ingredient.unit ? `${ingredient.unit} ` : "",
-                                {
-                                    class: "recipe__card__list__item",
-                                }
-                            );
-                        })
-                    ),
-                    createDom("p", `${this.lastName}`, { class: "recipe__card__description" })
-                )
-            )
-        );
-        return card;
+    //5 put the ingredients and quantity on the recipeCard (recipeContainer)
+  //create li to put ingredients[array].ingredients.ingredients
+
+  get ingredientsList() {
+    
+    let ingredientsList = "";
+    this._ingredients.forEach((ingredient) => {
+      if (ingredient.quantity) {
+        if (ingredient.unit && ingredient.quantity) {
+        ingredientsList += `
+      <li class = "recipe-ingredients"> <strong>${ingredient.ingredient}</strong> : ${
+          ingredient.quantity ?? ""
+        } ${ingredient.unit ?? ""} </li>`;
+      } else {
+      ingredientsList += `
+      <li class= "recipe-ingredients"><strong>${ingredient.ingredient}</strong> :  ${
+        ingredient.quantity}
+       </li>`;
     }
+      } else {
+        ingredientsList += `
+      <li class= "recipe-ingredients"><strong>${ingredient.ingredient}</strong></li>`;
+      }
+     });
+    return ingredientsList;
+  }
+
+  // when description is too long, remove by "&hellip;" => ...
+  get shortDescription() {
+    const limit = 200;
+    if (this._description.length <= limit) return this._description;
+    let description = this._description.substr(0, limit - 1);
+    return description.substr(0, description.lastIndexOf(" ")) + " &hellip;";
+  }
+
+  //5 create display card
+  make() {
+    const card = document.createElement("div");
+    card.className = "receipe col-12 col-md-6 col-lg-4";
+    card.innerHTML = `
+    <div class="card rounded border-0">
+    <div class="card-header bg-grey"></div>
+	    <div class="card-body bg-light">
+	    <div class="title-time">
+		 <h5 class="card-title m-0 font-weight-light">
+		   ${this._name}
+		 </h5>
+		 <div class="recipe_time">
+		 <i class="far fa-clock"></i>
+		 <h5 class="time">${this._time}min</h5>
+	   </div>
+	 </div>
+	 <div class="ingredients-directions row">
+	   <ul class="ingredient-list list-group list-unstyled bg-light">
+     ${this.ingredientsList}
+	   </ul>
+	   <p class="card-text">
+	   ${this.shortDescription}
+	   </p>
+	 </div>
+   </div>
+   </div>`;
+   return card
+   
+    
+  }
+
+
 }
